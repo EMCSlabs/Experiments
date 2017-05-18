@@ -17,7 +17,7 @@ data = {}; pair = struct();
 
 %% Stress = 010
 m=1;
-for p = 1:length(stimuli.Stress);
+for p = 1:length(stimuli.Stress)
     val = ~cellfun(@isempty,regexp(stimuli.Stress,uq{m}));
     list = stimuli.no(val);
 end    
@@ -44,7 +44,7 @@ eval([sprintf('%s = ',sname) 'data;']); % assign the data to sname (pari.S010)
 
 %% Sonority pair classification: SIM / DIFF
 
-for i = 1:length(pair.S010);
+for i = 1:length(pair.S010)
     diff = pair.S010{i,3};
     if diff <= 3
         % (1) Similar
